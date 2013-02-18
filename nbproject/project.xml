@@ -65,17 +65,6 @@
                 </dependency>
             </module-dependencies>
             <public-packages>
-                <package>com.jogamp.common</package>
-                <package>com.jogamp.common.jvm</package>
-                <package>com.jogamp.common.net</package>
-                <package>com.jogamp.common.net.asset</package>
-                <package>com.jogamp.common.nio</package>
-                <package>com.jogamp.common.os</package>
-                <package>com.jogamp.common.type</package>
-                <package>com.jogamp.common.util</package>
-                <package>com.jogamp.common.util.cache</package>
-                <package>com.jogamp.common.util.locks</package>
-                <package>com.jogamp.gluegen.runtime</package>
                 <package>com.jogamp.gluegen.runtime.opengl</package>
                 <package>com.jogamp.graph.curve</package>
                 <package>com.jogamp.graph.curve.opengl</package>
@@ -113,6 +102,11 @@
                 <package>com.jogamp.opengl.util.texture.awt</package>
                 <package>com.jogamp.opengl.util.texture.spi</package>
                 <package>com.jogamp.opengl.util.texture.spi.awt</package>
+                <package>glredbook</package>
+                <package>glredbook10</package>
+                <package>glredbook11</package>
+                <package>glredbook12x</package>
+                <package>glredbook1314</package>
                 <package>javax.media.nativewindow</package>
                 <package>javax.media.nativewindow.util</package>
                 <package>javax.media.opengl</package>
@@ -121,11 +115,6 @@
                 <package>javax.media.opengl.glu</package>
                 <package>javax.media.opengl.glu.gl2</package>
                 <package>javax.media.opengl.glu.gl2es1</package>
-                <package>jogamp.common</package>
-                <package>jogamp.common.awt</package>
-                <package>jogamp.common.jvm</package>
-                <package>jogamp.common.os</package>
-                <package>jogamp.common.util.locks</package>
                 <package>jogamp.graph.curve.opengl</package>
                 <package>jogamp.graph.curve.opengl.shader</package>
                 <package>jogamp.graph.curve.tess</package>
@@ -186,14 +175,169 @@
                 <package>jogamp.opengl.windows.wgl</package>
                 <package>jogamp.opengl.windows.wgl.awt</package>
                 <package>jogamp.opengl.x11.glx</package>
+                <package>org.jzy3d.analysis</package>
+                <package>org.jzy3d.bridge</package>
+                <package>org.jzy3d.bridge.awt</package>
+                <package>org.jzy3d.bridge.swing</package>
+                <package>org.jzy3d.bridge.swt</package>
+                <package>org.jzy3d.chart</package>
+                <package>org.jzy3d.chart.controllers</package>
+                <package>org.jzy3d.chart.controllers.camera</package>
+                <package>org.jzy3d.chart.controllers.keyboard.camera</package>
+                <package>org.jzy3d.chart.controllers.keyboard.lights</package>
+                <package>org.jzy3d.chart.controllers.keyboard.screenshot</package>
+                <package>org.jzy3d.chart.controllers.mouse</package>
+                <package>org.jzy3d.chart.controllers.mouse.camera</package>
+                <package>org.jzy3d.chart.controllers.mouse.picking</package>
+                <package>org.jzy3d.chart.controllers.mouse.selection</package>
+                <package>org.jzy3d.chart.controllers.targets</package>
+                <package>org.jzy3d.chart.controllers.thread.camera</package>
+                <package>org.jzy3d.chart.factories</package>
+                <package>org.jzy3d.chart.graphs</package>
+                <package>org.jzy3d.colors</package>
+                <package>org.jzy3d.colors.colormaps</package>
+                <package>org.jzy3d.contour</package>
+                <package>org.jzy3d.events</package>
+                <package>org.jzy3d.global</package>
+                <package>org.jzy3d.io</package>
+                <package>org.jzy3d.io.obj</package>
+                <package>org.jzy3d.maths</package>
+                <package>org.jzy3d.maths.algorithms</package>
+                <package>org.jzy3d.maths.algorithms.interpolation</package>
+                <package>org.jzy3d.maths.algorithms.interpolation.bernstein</package>
+                <package>org.jzy3d.maths.graphs</package>
+                <package>org.jzy3d.picking</package>
+                <package>org.jzy3d.plot2d.primitive</package>
+                <package>org.jzy3d.plot2d.rendering</package>
+                <package>org.jzy3d.plot3d.builder</package>
+                <package>org.jzy3d.plot3d.builder.concrete</package>
+                <package>org.jzy3d.plot3d.builder.delaunay</package>
+                <package>org.jzy3d.plot3d.builder.delaunay.jdt</package>
+                <package>org.jzy3d.plot3d.pipelines</package>
+                <package>org.jzy3d.plot3d.primitives</package>
+                <package>org.jzy3d.plot3d.primitives.axes</package>
+                <package>org.jzy3d.plot3d.primitives.axes.layout</package>
+                <package>org.jzy3d.plot3d.primitives.axes.layout.providers</package>
+                <package>org.jzy3d.plot3d.primitives.axes.layout.renderers</package>
+                <package>org.jzy3d.plot3d.primitives.contour</package>
+                <package>org.jzy3d.plot3d.primitives.enlightables</package>
+                <package>org.jzy3d.plot3d.primitives.graphs</package>
+                <package>org.jzy3d.plot3d.primitives.graphs.impl</package>
+                <package>org.jzy3d.plot3d.primitives.graphs.layout</package>
+                <package>org.jzy3d.plot3d.primitives.interactive.tools</package>
+                <package>org.jzy3d.plot3d.primitives.pickable</package>
+                <package>org.jzy3d.plot3d.primitives.selectable</package>
+                <package>org.jzy3d.plot3d.primitives.textured</package>
+                <package>org.jzy3d.plot3d.primitives.vbo</package>
+                <package>org.jzy3d.plot3d.rendering.canvas</package>
+                <package>org.jzy3d.plot3d.rendering.legends</package>
+                <package>org.jzy3d.plot3d.rendering.legends.colorbars</package>
+                <package>org.jzy3d.plot3d.rendering.lights</package>
+                <package>org.jzy3d.plot3d.rendering.ordering</package>
+                <package>org.jzy3d.plot3d.rendering.scene</package>
+                <package>org.jzy3d.plot3d.rendering.textures</package>
+                <package>org.jzy3d.plot3d.rendering.tooltips</package>
+                <package>org.jzy3d.plot3d.rendering.view</package>
+                <package>org.jzy3d.plot3d.rendering.view.annotation</package>
+                <package>org.jzy3d.plot3d.rendering.view.controllers</package>
+                <package>org.jzy3d.plot3d.rendering.view.layout</package>
+                <package>org.jzy3d.plot3d.rendering.view.modes</package>
+                <package>org.jzy3d.plot3d.text</package>
+                <package>org.jzy3d.plot3d.text.align</package>
+                <package>org.jzy3d.plot3d.text.drawable</package>
+                <package>org.jzy3d.plot3d.text.drawable.cells</package>
+                <package>org.jzy3d.plot3d.text.overlay</package>
+                <package>org.jzy3d.plot3d.text.renderers</package>
+                <package>org.jzy3d.plot3d.text.renderers.jogl</package>
+                <package>org.jzy3d.plot3d.transform</package>
+                <package>org.jzy3d.ui</package>
+                <package>org.jzy3d.ui.editors</package>
+                <package>org.jzy3d.ui.views</package>
+                <package>org.jzy3d.utils</package>
             </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-linux-armv7.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-linux-armv7.jar</binary-origin>
+            </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/gluegen-rt.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/gluegen-rt.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-solaris-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-solaris-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/org.jzy3d-api.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/org.jzy3d-api.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-macosx-universal.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-macosx-universal.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-linux-armv7hf.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-linux-armv7hf.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-linux-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-linux-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-windows-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-windows-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-windows-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-linux-armv7hf.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-armv7hf.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-solaris-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-solaris-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
                 <runtime-relative-path>ext/jogl-all.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/jogl-all.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-linux-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-solaris-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-solaris-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-linux-armv7.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-armv7.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-linux-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-macosx-universal.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-macosx-universal.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-solaris-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-solaris-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-windows-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-windows-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-linux-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-linux-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-windows-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-i586.jar</binary-origin>
             </class-path-extension>
         </data>
     </configuration>
