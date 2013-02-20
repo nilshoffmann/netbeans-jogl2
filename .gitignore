@@ -6,3 +6,9 @@
 *.ear
 /nbproject/private/
 /build/
+!/release/modules/ext/gluegen-rt-natives-linux-armv7.jar
+!/release/modules/ext/gluegen-rt-natives-linux-armv7hf.jar
+!/release/modules/ext/gluegen.jar
+!/release/modules/ext/jogl-all-natives-linux-armv7.jar
+!/release/modules/ext/jogl-all-natives-linux-armv7hf.jar
+!/release/modules/ext/org.jzy3d-api.jar

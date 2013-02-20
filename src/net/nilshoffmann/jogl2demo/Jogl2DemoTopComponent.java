@@ -28,7 +28,7 @@ import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 
 /**
- * Top component which displays something.
+ * Top component which displays a JOGL2 demo.
  */
 @ConvertAsProperties(
     dtd = "-//net.nilshoffmann.jogl2demo//Jogl2Demo//EN",
@@ -53,27 +53,31 @@ public final class Jogl2DemoTopComponent extends TopComponent {
     static GLCapabilities glCaps;
     int quad_x = 5;
     int quad_y = 5;
-    private final Component canvas;
+    private NewtCanvasAWT canvas;
     
     public Jogl2DemoTopComponent() {
         glCaps = new GLCapabilities(null);
         initComponents();
         setName(Bundle.CTL_Jogl2DemoTopComponent());
         setToolTipText(Bundle.HINT_Jogl2DemoTopComponent());
-        canvas = makeWindow("TestWindow", glCaps);
-        GLDrawable gld = GLDrawableFactory.getDesktopFactory().createGLPbuffer(null, glCaps, null, 800, 600, null);
-        System.out.println(gld.getClass().getName());
-        gld = GLDrawableFactory.getDesktopFactory().createOffscreenDrawable(null, glCaps, null, 800, 600);
-        System.out.println(gld.getClass().getName());
-        add(canvas, BorderLayout.CENTER);
     }
-    
-    private Component makeWindow(
+
+	@Override
+	protected void componentOpened() {
+		super.componentOpened();
+		canvas = makeWindow("TestWindow", glCaps);
+        add(canvas, BorderLayout.CENTER);
+	}
+
+	@Override
+	protected void componentClosed() {
+		super.componentClosed();
+		canvas.destroy();
+	}
+
+    private NewtCanvasAWT makeWindow(
             final String name, final GLCapabilities caps) {
         final GLWindow window = GLWindow.create(caps);
-
-//        window.setSize(640, 480);
-//        window.setVisible(true);
         window.setTitle(name);
         window.addWindowListener(new WindowAdapter() {
             @Override

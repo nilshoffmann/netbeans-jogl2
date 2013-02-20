@@ -9,6 +9,8 @@ import java.awt.Component;
 import java.util.concurrent.locks.ReentrantLock;
 import javax.media.opengl.GLCapabilities;
 import javax.media.opengl.GLProfile;
+import javax.swing.RepaintManager;
+import javax.swing.SwingUtilities;
 import org.jzy3d.chart.Chart;
 import org.jzy3d.chart.controllers.mouse.DualModeMouseSelector;
 import org.jzy3d.chart.controllers.mouse.camera.CameraMouseController;
@@ -32,7 +34,7 @@ import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 
 /**
- * Top component which displays something.
+ * Top component which displays a JZY3D demo.
  */
 @ConvertAsProperties(
     dtd = "-//net.nilshoffmann.jogl2demo//Jzy3DDemo//EN",
@@ -68,12 +70,15 @@ public final class Jzy3DDemoTopComponent extends TopComponent {
     
     @Override
     protected void componentOpened() {
+		super.componentOpened();
+		System.out.println("Opened");
         createChart();
     }
     
     @Override
     protected void componentClosed() {
-//        printDrawableState();
+		super.componentClosed();
+		System.out.println("Closed");
         if (chart != null) {
             try {
                 chart.dispose();
@@ -90,31 +95,32 @@ public final class Jzy3DDemoTopComponent extends TopComponent {
     @Override
     protected void componentShowing() {
         super.componentShowing();
-//        chart.render();
+		System.out.println("Showing");
     }
 
     @Override
     protected void componentHidden() {
         super.componentHidden();
+		System.out.println("Hidden");
     }
     
     @Override
     protected void componentActivated() {
         super.componentActivated();
-//        chart.render();
+		System.out.println("Activated");
+		RepaintManager.currentManager(this).addInvalidComponent(this);
     }
-    
-//    private void printDrawableState() {
-//        if (chart != null) {
-//            System.out.println("GLDrawable realized: " + chart.getCanvas().getDrawable().isRealized());
-//        }
-//    }
+
+	@Override
+	protected void componentDeactivated() {
+		super.componentDeactivated();
+		System.out.println("Deactivated");
+		RepaintManager.currentManager(this).addInvalidComponent(this);
+	}
     
     private void createChart() {
         if (chart == null) {
-//            GLCapabilities glc = new GLCapabilities(GLProfile.getDefault());
-//            ChartComponentFactory factory = new ChartComponentFactory();
-            chart = new Chart(Quality.Advanced, "newt");//, glc);
+            chart = new Chart(Quality.Advanced, "newt");
             chart.getView().setMaximized(true);
             canvas = (Component) chart.getCanvas();
             ctc = new CameraThreadController(chart);
