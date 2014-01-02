@@ -7,9 +7,9 @@ component and how to set up and display a TopComponent using the NEWT windowing 
 Additionally, it includes a recent version of the [jzy3d](http://www.jzy3d.org/) library based on JOGL 2, using
 the NEWT canvas. 
 
-The Module requires at least [NetBeans 7.2](http://www.netbeans.org). It may work with earlier versions.
+The Module requires at least [NetBeans 7.4](http://www.netbeans.org). It may work with earlier versions.
 It adds two additional menu entries under "Window->JOGL 2 Demo" and "Window->Jzy3D Demo".
 
-Please bear in mind that the jzy3d support for NEWT is still experimental and may lead to 
-random lockups due to interactions of the NetBeans docking framework, the event dispatch thread, and 
-the way the NEWT canvas and jzy3d interact.
+We currently use JOGL 2.1.3.. Please note that Jzy3D 0.9.1, bundled in this module has been compiled against 
+a previous RC version of JOGL. Therefor, please look at the implementation within Jzy3DDemoTopComponent for a 
+workaround for a [known issue with that version](https://github.com/jzy3d/jzy3d-api/issues/33).

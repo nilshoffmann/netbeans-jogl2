@@ -12,3 +12,8 @@
 !/release/modules/ext/jogl-all-natives-linux-armv7.jar
 !/release/modules/ext/jogl-all-natives-linux-armv7hf.jar
 !/release/modules/ext/org.jzy3d-api.jar
+!/release/modules/ext/jzy3d-api-0.9.1.jar
+!/release/modules/ext/gluegen-rt-natives-linux-armv6.jar
+!/release/modules/ext/jogl-all-natives-linux-armv6.jar
+!/release/modules/ext/jogl-all-natives-linux-armv6hf.jar
+!/release/modules/ext/gluegen-rt-natives-linux-armv6hf.jar
