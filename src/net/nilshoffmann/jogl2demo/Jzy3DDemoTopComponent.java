@@ -36,6 +36,8 @@ import org.jzy3d.plot3d.rendering.canvas.CanvasNewtAwt;
 import org.jzy3d.plot3d.rendering.canvas.Quality;
 import org.netbeans.api.progress.ProgressHandle;
 import org.netbeans.api.progress.ProgressHandleFactory;
+//import org.netbeans.api.progress.ProgressHandle;
+//import org.netbeans.api.progress.ProgressHandleFactory;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
