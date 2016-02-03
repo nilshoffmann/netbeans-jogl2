@@ -54,7 +54,7 @@ import org.openide.windows.TopComponent;
 	displayName = "#CTL_Jogl2GLJPanelAction",
 	preferredID = "Jogl2GLJPanelTopComponent")
 @Messages({
-	"CTL_Jogl2GLJPanelAction=Jogl2 GLPanel Demo",
+	"CTL_Jogl2GLJPanelAction=Jogl2 GLJPanel Demo",
 	"CTL_Jogl2GLJPanelTopComponent=Jogl2 Demo Window",
 	"HINT_Jogl2GLJPanelTopComponent=This is a Jogl2 Demo window"
 })
